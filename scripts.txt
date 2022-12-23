@@ -1,0 +1,4 @@
+ng new front-example
+
+# datos importantes
+mysql tiene configuraciones respecto a minusculas y mayusculas(Problemas)

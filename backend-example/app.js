@@ -6,11 +6,10 @@ var logger = require('morgan');
 // variables de entorno
 const PATH_ENV = {path:__dirname+'.env'}
 require('dotenv').config(PATH_ENV)
-console.log(process.env.PORT_API)
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var product_router = require('./routes/product')
 var app = express();
 
 // view engine setup
@@ -25,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
+app.use('/product', product_router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -7,5 +7,6 @@ product_router.post('/', product_controllers.create);
 product_router.post('/create_all', product_controllers.create_all);
 //product_router.get(/\/a[b|d]c/, product_controllers.get_search);
 product_router.get('/:name', product_controllers.get_search);
+product_router.get('/all', product_controllers.get_all);
 
 module.exports = product_router;

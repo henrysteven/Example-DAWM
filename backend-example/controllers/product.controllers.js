@@ -45,6 +45,15 @@ exports.create_all = async (req, res, next) => {
     var response = size == value.length ? { 'count create': size } : { 'error': 'no create all' };
     return res.status(200).send(response);
 }
+exports.get_all = (req, res, next) => {
+    return PRODUCT.findAll({})
+    .then((result) => {
+        res.status(200).send(result);
+    })
+    .catch((err) => {
+        res.status(500).send(err);
+    });
+}
 
 
 exports.get_search = async (req, res, next) => {

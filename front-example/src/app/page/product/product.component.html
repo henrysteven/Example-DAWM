@@ -1,1 +1,25 @@
-<p>product works!</p>
+<h2><strong> Productos</strong></h2>
+<div>
+    <button mat-raised-button (click)='openDialog()' color="primary">Añadir Producto</button>
+</div>
+<div class="products">
+  <table class="default">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Valor</th>
+      <th>Id Usuario</th>
+    </tr>
+
+    <ng-container *ngFor="let product of products">
+        <tr>
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.value }}</td>
+          <td>{{ product.user_id }}</td>
+        </tr>
+    </ng-container>
+  </table>
+</div>

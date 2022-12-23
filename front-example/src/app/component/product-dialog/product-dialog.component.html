@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <h2><strong> Editar o Crear Productos </strong></h2>
+
+  <h3><strong>Productos</strong></h3>
+  <div class="button">
+    <button mat-raised-button color="primary" (click)="add_new_formGroup()">
+      Añadir Producto
+    </button>
+    <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+  </div>
+  <div class="form-tabla">
+    <form [formGroup]="productsGroup">
+      <div formArrayName="productsArray">
+        <div
+          class="field"
+          *ngFor="let p of get_productsArray.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <p>
+            <strong>{{ i + 1 }}.</strong>
+          </p>
+          <mat-form-field class="input-width" appearance="outline">
+            <mat-label>ID</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="id"
+              name="id"
+              [disabled]="true"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" name="name" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <textarea
+              rows="1"
+              matInput
+              formControlName="description"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="input-width" appearance="outline">
+            <mat-label>Valor</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="value"
+              name="value"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="input-width" appearance="outline">
+            <mat-label>ID Usuario</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="user_id"
+              name="user_id"
+            />
+          </mat-form-field>
+
+          <button mat-icon-button (click)='remove(i)' color="primary">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

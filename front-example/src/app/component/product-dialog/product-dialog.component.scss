@@ -1,0 +1,20 @@
+.field{
+    display: grid;
+    grid-template-columns: 2% 5% 8% 25% 5% 5% 5%;
+    grid-template-rows: 50%;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 25px;
+}
+.wrapper{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}

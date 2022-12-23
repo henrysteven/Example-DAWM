@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         status: {
             allowNull: true,
             defaultValue: 1,
-            type: DataTypes.CHAR
+            type: DataTypes.BOOLEAN
         },
         role: {
             allowNull: true,

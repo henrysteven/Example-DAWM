@@ -16,7 +16,7 @@ const routes: Routes = [
         //canActivate: [AuthTokenAdminGuardGuard],
         title: 'Products',
     },
-    { path: '**', component: HomeComponent }
+    { path: '**', component: ProductComponent }
 ];
 
 @NgModule({

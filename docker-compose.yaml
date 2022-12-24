@@ -17,6 +17,33 @@ services:
     volumes:
       - db:/var/lib/mysql
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    #networks:
+    #  - backend
+  api:
+    build: ./backend-example
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      - VARIABLEDEENTORNO=valorss
+      - VARIABLEDEENTORNO_2=${PORT_DB}
+  dashboard:
+    build: ./front-example
+    depends_on:
+      - api
+    ports:
+      - "4200:4200"
+    expose:
+      - "4200"
+    #networks:
+    #  - backend
+#networks:
+ # - backend:
 volumes:
   db:
     driver: local

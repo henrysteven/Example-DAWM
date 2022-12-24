@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
             defaultValue: 'admin@asa.com',
             type: DataTypes.STRING
+        },
+        pass: {
+            allowNull: true,
+            type: DataTypes.STRING
         }
     }, {
         timestamps: true,

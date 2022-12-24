@@ -1,0 +1,13 @@
+.box, .inputs{
+    flex-direction: column;
+    align-items: center;
+}
+.box, .inputs{
+    display: flex;
+}
+.token{
+    width: 60%;
+    padding-top: 30px;
+    text-align: justify;
+    word-wrap: break-word;
+}

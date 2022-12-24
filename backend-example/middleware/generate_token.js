@@ -2,19 +2,20 @@
 
 const jwt = require("jsonwebtoken");
 
-const tokenPassword = require("../config/app_back.config.js")
+require('dotenv').config('../.env')
 
 
 exports.generate_token = (user) => {
-  const token = jwt.sign(
-    {
-      Username: user.Username,
-      UserId: user.UserId,
-    },
-    tokenPassword.TOKEN_SECRET,
-    {
-      expiresIn: "4h",
-    }
-  );
-  return token;
+    const TOKEN_SECRET = process.env.TOKEN_PASS;
+    const token = jwt.sign(
+        {
+            username: user.username,
+            user_id: user.user_id,
+        },
+        TOKEN_SECRET,
+        {
+            expiresIn: "4h",
+        }
+    );
+    return token;
 };

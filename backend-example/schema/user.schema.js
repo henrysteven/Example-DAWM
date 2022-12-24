@@ -5,5 +5,6 @@ exports.user_schema = {
         status: { type: 'bool' },
         role: { type: 'string', eq: ['admin', 'user'] },
         email: { type: 'string', pattern: 'email' },
+        pass: { type: 'string', minLength: 5 },
     },
 };

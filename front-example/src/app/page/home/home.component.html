@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div class="box">
+  <button class="link" mat-raised-button color="primary" routerLink="/product">
+    Go to Product
+  </button>
+  <div class="title">
+    <h2><strong> Login</strong></h2>
+  </div>
+  <div class="form-login">
+    <form [formGroup]="loginGroup">
+      <div class="inputs">
+        <mat-form-field>
+          <mat-label>Usuario</mat-label>
+          <input matInput type="text" formControlName="user" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="pass" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="login()">
+          Iniciar
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="token">
+    <p *ngIf="token != ''" class="text">
+      {{ token }}
+    </p>
+  </div>
+</div>

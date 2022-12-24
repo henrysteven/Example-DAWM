@@ -3,21 +3,22 @@
     "username": "root",
     "password": "admin",
     "database": "db_example",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "localhost", 
+    "dialect": "mysql",
+    "__comentario" : "el host cambia por el nombre del contenedor de la base de datos"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "password": "admin",
+    "database": "db_example",
+    "host": "db",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "password": "admin",
+    "database": "db_example",
+    "host": "db",
     "dialect": "mysql"
   }
 }

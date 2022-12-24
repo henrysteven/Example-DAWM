@@ -1,11 +1,39 @@
 table {
-    width: 85%;
+    width: 100%;
     border: 1px solid #000;
- }
- th, td {
+}
+th,
+td {
     width: 15%;
     text-align: left;
     align-items: center;
     vertical-align: top;
     border: 1px solid #000;
- }
+}
+.link{
+    padding-top: 10px;
+}
+.title{
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+}
+.products{
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    border: solid 5px green;
+}
+.button{
+    width: 85%;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px;
+}
+.box{
+    flex-direction: column;
+    align-items: center;
+}
+.box, .button, .title{
+    display: flex;
+}

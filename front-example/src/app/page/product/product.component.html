@@ -1,18 +1,35 @@
-<h2><strong> Productos</strong></h2>
-<div>
-    <button mat-raised-button (click)='openDialog()' color="primary">Añadir Producto</button>
-</div>
-<div class="products">
-  <table class="default">
-    <tr>
-      <th>Id</th>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Valor</th>
-      <th>Id Usuario</th>
-    </tr>
+<div class="box">
+  <button class='link' mat-raised-button color="primary" routerLink="/home">
+    Go to Home
+  </button>
+  <div class="title">
+    <h2><strong> Productos</strong></h2>
+  </div>
+  <div class="button">
+    <button mat-raised-button (click)="openDialog()" color="primary">
+      Añadir Producto
+    </button>
+    <mat-form-field>
+      <mat-label>Buscar</mat-label>
+      <mat-icon matPrefix id="icon-search">search</mat-icon>
+      <input
+        matInput
+        type="search"
+        (keyup)="search_product($any($event.target).value)"
+      />
+    </mat-form-field>
+  </div>
+  <div class="products">
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Valor</th>
+        <th>Id Usuario</th>
+      </tr>
 
-    <ng-container *ngFor="let product of products">
+      <ng-container *ngFor="let product of products">
         <tr>
           <td>{{ product.id }}</td>
           <td>{{ product.name }}</td>
@@ -20,6 +37,7 @@
           <td>{{ product.value }}</td>
           <td>{{ product.user_id }}</td>
         </tr>
-    </ng-container>
-  </table>
+      </ng-container>
+    </table>
+  </div>
 </div>

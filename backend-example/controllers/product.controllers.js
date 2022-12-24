@@ -64,7 +64,6 @@ exports.get_all = async (req, res, next) => {
 
 
 exports.get_search = async (req, res, next) => {
-    console.log(req.params)
     const schema = Joi.object({
         name: Joi.string(),
     });

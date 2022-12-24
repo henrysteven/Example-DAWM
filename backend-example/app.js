@@ -5,8 +5,6 @@ var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 // variables de entorno
-const PATH_ENV = {path:__dirname+'.env'}
-require('dotenv').config(PATH_ENV)
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

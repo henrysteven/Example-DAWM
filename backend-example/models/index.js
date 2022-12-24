@@ -27,7 +27,7 @@ db.Sequelize = Sequelize;
 db.USER = require('./usuario.model')(sequelize, DataTypes);
 db.PRODUCT = require('./product.model')(sequelize, DataTypes);
 //(async () => {
-    /* sequelize.sync({ force: true, alter: true }).then((data) => {
+/* sequelize.sync({ force: true, alter: true }).then((data) => {
         for (const table of Object.keys(data.models)) {
             console.log(`-- Table ${table} created successfully!`);
         }

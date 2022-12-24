@@ -41,6 +41,17 @@ export class ProductComponent implements OnInit {
             });
     }
 
+    async search_product(keyword: string) {
+        keyword = keyword.trim().toLowerCase();
+        if (keyword) {
+            console.log(keyword)
+            console.log(typeof(keyword))
+            this.products = await this.product_service.method_get(`/search/${keyword}`);
+        }else{
+            this.get_all();
+        }
+    }
+
     async get_all() {
         this.products = await this.product_service.method_get('/all');
     }

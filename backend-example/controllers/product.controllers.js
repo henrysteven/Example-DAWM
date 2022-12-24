@@ -23,10 +23,6 @@ exports.create = (req, res, next) => {
 }
 
 exports.create_all = async (req, res, next) => {
-
-
-    // update si existe si no guardar
-
     const schema = Joi.object({
         id: Joi.number(),
         name: Joi.string(),

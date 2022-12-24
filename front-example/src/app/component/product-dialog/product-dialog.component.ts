@@ -85,7 +85,7 @@ export class ProductDialogComponent implements OnInit {
     }
     get get_productsArray() {
         var productsArray = this.productsGroup.get('productsArray') as FormArray
-
+        console.log('sss')
         return productsArray;
     }
 

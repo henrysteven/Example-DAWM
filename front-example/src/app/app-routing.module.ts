@@ -13,7 +13,6 @@ const routes: Routes = [
     {
         path: 'product',
         component: ProductComponent,
-        //canActivate: [AuthTokenAdminGuardGuard],
         title: 'Products',
     },
     { path: '**', component: ProductComponent }

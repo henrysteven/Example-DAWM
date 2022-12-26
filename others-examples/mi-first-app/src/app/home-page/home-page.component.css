@@ -1,0 +1,25 @@
+.box{
+   height: 60px;
+   width: 150px;
+   padding: 1rem;
+}
+#example1{
+
+   background-color: red;
+}
+#example2{
+   background-color: green;
+   
+}
+#example3{
+   background-color: blue;
+
+}
+.wrapper{
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+.button{
+   margin-top: 15px;
+}

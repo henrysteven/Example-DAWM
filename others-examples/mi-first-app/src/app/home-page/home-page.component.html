@@ -1,0 +1,28 @@
+<p>home-page works!</p>
+
+<p *ngIf="cargar; else carga">
+   Se muestra este mensaje
+</p>
+<ng-template  #carga>
+   No se muestra este mensaje 
+</ng-template >
+<div class="wrapper">
+    <button class='button' routerLink="/landing">
+        to landing
+     </button>
+   <div class="box" id="example1" [style.background-color]="color1 ? 'red' : 'yellow'" #example1>
+      <button class='button' (click)="first_case()">
+         Cambia al color {{color1 ? 'Amarillo' : 'Rojo'}}
+      </button>
+   </div>
+   <div class="box" id="example2" #example2>
+      <button class='button' (click)="second_case()">
+         Cambia al color {{color2 ? 'Verde' : 'Rosado'}}
+      </button>
+   </div>
+   <div class="box" id="example3" #example3>
+      <button class='button' (click)="third_case()">
+         Cambia al color {{color3 ? 'Azul' : 'Morado'}}
+      </button>
+   </div>
+</div>

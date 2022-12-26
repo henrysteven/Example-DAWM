@@ -1,0 +1,26 @@
+.event{
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+  height: 3rem;
+  align-items: baseline;
+  justify-content: center;
+  
+}
+.show-event{
+  font-weight: bold;
+}
+span{
+  font-weight: normal;
+}
+#myInputCell:invalid {
+  border: red solid 3px;
+}
+#myInputCell:valid {
+  border: green solid 3px;
+}
+.box{
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+}

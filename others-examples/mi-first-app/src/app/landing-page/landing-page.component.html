@@ -1,0 +1,11 @@
+<h3>landing-page</h3>
+<h4>Pokemons</h4>
+<div class="wrapper">
+  <div class="pokemon-box" *ngFor="let pokemon of pokemons; let ed = index">
+    <p class="index">
+      <strong> {{ ed + 1 }}. </strong>&nbsp;
+    </p>
+    <p class="name" id="{{pokemon.name}}">{{ pokemon.name }} &nbsp;</p>
+    <img [src]="pokemon.image" class="image" alt="">
+  </div>
+</div>

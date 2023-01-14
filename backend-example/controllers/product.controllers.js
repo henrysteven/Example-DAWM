@@ -89,7 +89,7 @@ exports.delete_product = async (req, res, next) => {
     if (error) {
         return res.status(500).send(error)
     }
-    let product = await PRODUCT.findOne({ where: { id: value.id } }).catch(e => {
+    let product = await PRODUCT.findOne({ where: { id: value.id } },{id:1}).catch(e => {
         console.log(e.message)
     });
     console.log(product)

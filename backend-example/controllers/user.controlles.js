@@ -5,7 +5,7 @@ const { user_schema } = require("../schema/user.schema");
 const generate_token = require('../middleware/generate_token').generate_token;
 
 exports.get_all = function (req, res, next) {
-    return USER.findAll({})
+    return USER.findAll({}, {})
         .then((result) => {
             res.status(200).send(result);
         })
@@ -61,6 +61,5 @@ exports.login = async (req, res, next) => {
         username: user.username,
         user_id: user.user_id
     });
-    console.log(token);
     return res.send({ 'token': token });
 }
